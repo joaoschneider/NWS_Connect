@@ -4,7 +4,7 @@
 ⚙ Stack: Android <br>
 ☁ Banco de dados: Firebase
 
-## Informações gerai
+## Informações gerais
 
 Esse aplicativo está sendo desenvolvido para facilitar a computação de transações entre agente e atleta.
 Uma **transação** é definida como a entrega de material esportivo por parte da **NWS** para um **atleta**. A **transação** possui as seguintes informações:
