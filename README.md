@@ -1,7 +1,7 @@
 # Aplicativo NWS
 
 ## Informações Técnicas:
-⚙ Stack: Android
+⚙ Stack: Android <br>
 ☁ Banco de dados: Firebase
 
 ## Informações gerai
