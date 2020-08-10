@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">NWSConnect</string>
+
+    <!-- Strings para textViews -->
+    <string name="connected_as">Conectado como %s</string>
+
+    <!-- Strings para buttons -->
+    <string name="btn_newTransaction">Realizar\nEntrega</string>
+    <string name="btn_newMaterial">Novo\nMaterial</string>
 </resources>
