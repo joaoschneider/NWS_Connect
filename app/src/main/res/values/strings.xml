@@ -7,4 +7,10 @@
     <!-- Strings para buttons -->
     <string name="btn_newTransaction">Realizar\nEntrega</string>
     <string name="btn_newMaterial">Novo\nMaterial</string>
+
+    <string-array name="Material">
+        <item></item>
+        <item> Luvas </item>
+        <item> Chuteiras </item>
+    </string-array>
 </resources>

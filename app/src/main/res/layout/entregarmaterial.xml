@@ -11,32 +11,35 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="315dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="218dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <Button
         android:id="@+id/new_transaction2"
         android:layout_width="360dp"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/btn_selector"
-        android:text="Atualizar"
+        android:text="Entregar"
+        android:textSize="18dp"
         android:textAllCaps="false"
         android:textColor="@color/text_in_white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,17 +51,11 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="119dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TESTE"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="45dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,7 @@
         android:background="@drawable/btn_selector"
         android:text="@string/btn_newMaterial"
         android:textAllCaps="false"
+        android:onClick="vaientregamaterial"
         android:textColor="@color/text_in_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
