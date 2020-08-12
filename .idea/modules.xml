@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NWSConnect.iml" filepath="$PROJECT_DIR$/.idea/modules/NWSConnect.iml" group="NWSConnect" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/NWSConnect.iml" filepath="$PROJECT_DIR$/.idea/NWSConnect.iml" group="NWSConnect" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="NWSConnect/app" />
     </modules>
   </component>
