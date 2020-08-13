@@ -75,6 +75,9 @@ public class entregarMaterial extends AppCompatActivity{
                 String selectedItemText = (String) parent.getItemAtPosition(position);
                 // If user change the default selection
                 // First item is disable and it is used for hint
+                if(position == 0){
+
+                }
                 if(position > 0){
                     // Notify the selected item text
                     Toast.makeText
