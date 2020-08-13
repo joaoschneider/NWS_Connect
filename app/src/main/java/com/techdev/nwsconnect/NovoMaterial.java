@@ -39,6 +39,10 @@ public class NovoMaterial extends Funcoes{
                     tipo.setVisibility(View.GONE);
 
                 }
+                else{
+                    tipo.setVisibility(View.VISIBLE);
+                    tamanho.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
