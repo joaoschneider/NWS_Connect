@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "357722830288",
+    "firebase_url": "https://nwsconnect.firebaseio.com",
+    "project_id": "nwsconnect",
+    "storage_bucket": "nwsconnect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357722830288:android:5d2462d0f008d3f06eb5d5",
+        "android_client_info": {
+          "package_name": "com.techdev.nwsconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357722830288-q22oen1fhcnhdnb34v4qp0emuefrjskg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNEGO4dF4pGaBfc4u6nNya_iekEuUM7DA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "357722830288-q22oen1fhcnhdnb34v4qp0emuefrjskg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
