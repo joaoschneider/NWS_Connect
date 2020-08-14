@@ -20,8 +20,15 @@ public class Funcoes extends AppCompatActivity {
             "Luva"
     };
 
-    public void setSpinner (Spinner spinnermaterial){
-        final List<String> materialList = new ArrayList<>(Arrays.asList(material));
+    String[] tipos = new String[]{
+                "Mista",
+                "Primeira linha",
+                "Segunda linha",
+                "Society"
+    };
+
+    public void setSpinner (Spinner spinnermaterial, String[] stringarray){
+        final List<String> materialList = new ArrayList<>(Arrays.asList(stringarray));
 
         // Initializing an ArrayAdapter
         final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this,R.layout.item_spinner,materialList);

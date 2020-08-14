@@ -13,7 +13,7 @@ public class EntregarMaterial extends Funcoes{
         setContentView(R.layout.entregarmaterial);
 
         Spinner spinnermaterial = findViewById(R.id.spinner);
-        setSpinner(spinnermaterial);
+        setSpinner(spinnermaterial, material);
 
 
 
