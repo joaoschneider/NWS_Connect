@@ -7,8 +7,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,9 +19,17 @@ public class NovoMaterial extends Funcoes{
         setContentView(R.layout.novomaterial);
 
         Spinner spinnermaterial = findViewById(R.id.spinner);
-        final EditText tamanho = findViewById(R.id.tamanho);
-        final EditText tipo = findViewById(R.id.tipo);
+        Spinner spinnertrava = findViewById(R.id.tipotravaspinner);
 
+        materialSpinner(spinnermaterial, spinnertrava);
+
+        setSpinner(spinnertrava, tipos);
+
+    }
+
+
+
+    public void materialSpinner(Spinner spinnermaterial, final Spinner tipo){
         final List<String> materialList = new ArrayList<>(Arrays.asList(material));
 
         // Initializing an ArrayAdapter
@@ -34,14 +40,12 @@ public class NovoMaterial extends Funcoes{
         spinnermaterial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if("Chuteira" == (String) parent.getItemAtPosition(position)){
-                    tamanho.setVisibility(View.GONE);
+                if("Luva" == (String) parent.getItemAtPosition(position)){
                     tipo.setVisibility(View.GONE);
 
                 }
                 else{
                     tipo.setVisibility(View.VISIBLE);
-                    tamanho.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -51,6 +55,4 @@ public class NovoMaterial extends Funcoes{
             }
         });
     }
-
-
 }
