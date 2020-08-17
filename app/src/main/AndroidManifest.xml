@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".EntregarMaterial"/>
         <activity android:name=".NovoMaterial"/>
+        <activity android:name=".Recibos"/>
+
     </application>
 
 </manifest>

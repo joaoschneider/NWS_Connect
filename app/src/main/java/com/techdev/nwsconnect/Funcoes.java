@@ -97,5 +97,8 @@ public class Funcoes extends AppCompatActivity {
         Log.d(DEBUG_TAG, Arrays.toString(mAtletas.toArray()));
     }
 
-
+    public void vairecibos(View view) {
+        Intent recibos = new Intent(this, Recibos.class);
+        startActivity(recibos);
+    }
 }
