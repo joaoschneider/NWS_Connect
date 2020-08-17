@@ -21,24 +21,24 @@ public class Funcoes extends AppCompatActivity {
     };
 
     String[] tipos = new String[]{
-                "Mista",
-                "Primeira linha",
-                "Segunda linha",
-                "Society"
+            "Mista",
+            "Primeira linha",
+            "Segunda linha",
+            "Society"
     };
 
-    public void setSpinner (Spinner spinnermaterial, String[] stringarray){
+    public void setSpinner(Spinner spinnermaterial, String[] stringarray) {
         final List<String> materialList = new ArrayList<>(Arrays.asList(stringarray));
 
         // Initializing an ArrayAdapter
-        final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this,R.layout.item_spinner,materialList);
+        final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, R.layout.item_spinner, materialList);
         spinnerArrayAdapter.setDropDownViewResource(R.layout.item_spinner);
         spinnermaterial.setAdapter(spinnerArrayAdapter);
 
         spinnermaterial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0){
+                if (position == 0) {
 
                 }
             }
@@ -50,15 +50,20 @@ public class Funcoes extends AppCompatActivity {
         });
     }
 
-    public void vaientregamaterial (View view){
+    public void vaientregamaterial(View view) {
         Intent entregamaterial = new Intent(this, EntregarMaterial.class);
         startActivity(entregamaterial);
 
     }
 
-    public void vainovomaterial (View view){
+    public void vainovomaterial(View view) {
         Intent novomaterial = new Intent(this, NovoMaterial.class);
         startActivity(novomaterial);
 
+    }
+
+    public void vairecibos(View view) {
+        Intent recibos = new Intent(this, Recibos.class);
+        startActivity(recibos);
     }
 }
