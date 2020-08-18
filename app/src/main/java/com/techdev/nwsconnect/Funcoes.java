@@ -61,13 +61,12 @@ public class Funcoes extends AppCompatActivity {
         });
     }
 
-    protected void vaientregamaterial (View view){
+    public void vaientregamaterial (View view){
         Intent entregamaterial = new Intent(this, EntregarMaterial.class);
         startActivity(entregamaterial);
-
     }
 
-    protected void vainovomaterial (View view){
+    public void vainovomaterial (View view){
         Intent novomaterial = new Intent(this, NovoMaterial.class);
         startActivity(novomaterial);
     }
