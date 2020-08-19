@@ -29,7 +29,7 @@ public class NovoMaterial extends Funcoes{
 
 
     public void materialSpinner(Spinner spinnermaterial, final Spinner tipo){
-        final List<String> materialList = new ArrayList<>(Arrays.asList(material));
+        final List<String> materialList = material;
 
         // Initializing an ArrayAdapter
         final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this,R.layout.item_spinner,materialList);

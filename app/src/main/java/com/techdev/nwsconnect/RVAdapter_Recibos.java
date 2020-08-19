@@ -30,10 +30,9 @@ public class RVAdapter_Recibos extends RecyclerView.Adapter<RVAdapter_Recibos.My
     @Override
     public void onBindViewHolder(@NonNull RVAdapter_Recibos.MyViewHolder holder, int position) {
         holder.Atleta.setText(recibosList.get(position).atleta);
-        holder.Data.setText(recibosList.get(position).data);
+        holder.Data.setText(recibosList.get(position).data.toString());
         holder.Material.setText(recibosList.get(position).material);
-        holder.Quantidade.setText(recibosList.get(position).qtd);
-        Log.d("Debug","nomea" + recibosList .get(position).atleta);
+        holder.Quantidade.setText(recibosList.get(position).qtd.toString());
     }
 
     @Override

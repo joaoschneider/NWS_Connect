@@ -28,7 +28,9 @@ public class MainActivity extends Funcoes {
         setContentView(R.layout.landing_after_login);
 
         //Ao criar o app, buscar as informações de atletas para ter em um string array
+        buscarTransacoes();
         buscarAtletas();
+
     }
 
 

@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -23,23 +24,24 @@ import java.util.List;
 
 public class Funcoes extends AppCompatActivity {
     static List<String> mAtletas;
+    static List<FeedRecibos> mRecibos;
     private final String DEBUG_TAG = "NWSConnect";
 
     // Initializing a String Array
-    String[] material = new String[]{
+    List<String> material = Arrays.asList(new String[]{
             "Chuteira",
             "Luva"
-    };
+    });
 
-    String[] tipos = new String[]{
-                "Mista",
-                "Primeira linha",
-                "Segunda linha",
-                "Society"
-    };
+    List<String> tipos = Arrays.asList(new String[]{
+            "Mista",
+            "Primeira linha",
+            "Segunda linha",
+            "Society"
+    });
 
-    protected void setSpinner (Spinner spinnermaterial, String[] stringarray){
-        final List<String> materialList = new ArrayList<>(Arrays.asList(stringarray));
+    protected void setSpinner (Spinner spinnermaterial, List<String> stringarray){
+        final List<String> materialList = stringarray;
 
         // Initializing an ArrayAdapter
         final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this,R.layout.item_spinner,materialList);
@@ -73,6 +75,7 @@ public class Funcoes extends AppCompatActivity {
 
     protected void buscarAtletas(){
         final List<String> atletas = new ArrayList<>();
+        Log.d(DEBUG_TAG,"teste");
         FirebaseFirestore.getInstance().collection("atletas")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -81,6 +84,7 @@ public class Funcoes extends AppCompatActivity {
                         if(task.isSuccessful()){
                             for(DocumentSnapshot doc : task.getResult().getDocuments()){
                                 atletas.add((String) doc.get("nome"));
+                                Log.d(DEBUG_TAG,"info" + doc.get("nome"));
                             }
                             setAtletas(atletas);
                         }else{
@@ -95,9 +99,36 @@ public class Funcoes extends AppCompatActivity {
         mAtletas = atletas;
         Log.d(DEBUG_TAG, Arrays.toString(mAtletas.toArray()));
     }
-
     public void vairecibos(View view) {
         Intent recibos = new Intent(this, Recibos.class);
         startActivity(recibos);
     }
-}
+
+    protected void buscarTransacoes(){
+        final List<FeedRecibos> recibos = new ArrayList<>();
+        Log.d(DEBUG_TAG,"teste");
+        FirebaseFirestore.getInstance().collection("transacoes")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+                            for(DocumentSnapshot doc : task.getResult().getDocuments()){
+                                recibos.add(new FeedRecibos((String) doc.get("atleta"), (Timestamp) doc.get("data"), (String) doc.get("material"), (Long) doc.get("qtd")));
+                                Log.d(DEBUG_TAG,"recibo:" + doc.get("atleta"));
+                            }
+                            Log.d(DEBUG_TAG,"teste");
+                            setTransacoes(recibos);
+                        }else{
+                            Log.e(DEBUG_TAG, "Erro: " + task.getException().toString());
+                            Toast.makeText(Funcoes.this, "Verifique sua conexão. Não conseguimos conectar ao banco de dados...", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+    }
+
+    private void setTransacoes(List<FeedRecibos> recibos){
+        mRecibos = recibos;
+        Log.d(DEBUG_TAG, Arrays.toString(mRecibos.toArray()));
+    }}
+
